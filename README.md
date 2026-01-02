@@ -197,5 +197,3 @@ Este projeto é apenas uma interface para o ml-sharp da Apple. Consulte as licen
 [Link para o tutorial no YouTube] <!-- Adicione seu link aqui -->
 
 ---
-
-Feito com ❤️ para a comunidade de Gaussian Splatting
