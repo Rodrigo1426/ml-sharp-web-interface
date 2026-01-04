@@ -14,7 +14,7 @@ Interface web para transformar imagens 2D em modelos 3D Gaussian Splats usando o
 
 ## 📋 Requisitos
 
-- **macOS** ou **Linux**
+- **macOS**
 - **Python 3.10+** (recomendado: 3.11)
 - **Node.js 18+**
 - **Git**
@@ -25,7 +25,7 @@ Interface web para transformar imagens 2D em modelos 3D Gaussian Splats usando o
 ### 1. Clone este repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/ml-sharp-web-interface.git
+git clone https://github.com/Rodrigo1426/ml-sharp-web-interface.git
 cd ml-sharp-web-interface
 ```
 
