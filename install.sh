@@ -121,10 +121,30 @@ fi
 echo ""
 
 # =============================================================
+# Download do modelo
+# =============================================================
+echo "─────────────────────────────────────────────────────────"
+echo "Passo 4/5: Baixando modelo (~2.6GB)"
+echo "─────────────────────────────────────────────────────────"
+info "Isso pode demorar vários minutos dependendo da sua internet..."
+
+MODEL_PATH="$HOME/.cache/torch/hub/checkpoints/sharp_2572gikvuh.pt"
+
+if [ -f "$MODEL_PATH" ]; then
+    warn "Modelo já existe em cache, pulando download..."
+else
+    mkdir -p "$HOME/.cache/torch/hub/checkpoints"
+    curl -L -o "$MODEL_PATH" "https://ml-site.cdn-apple.com/models/sharp/sharp_2572gikvuh.pt" --progress-bar
+    success "Modelo baixado!"
+fi
+
+echo ""
+
+# =============================================================
 # Frontend
 # =============================================================
 echo "─────────────────────────────────────────────────────────"
-echo "Passo 4/4: Configurando Frontend"
+echo "Passo 5/5: Configurando Frontend"
 echo "─────────────────────────────────────────────────────────"
 
 mkdir -p uploads outputs

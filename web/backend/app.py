@@ -81,7 +81,7 @@ def generate_gaussian():
         cmd = ["sharp", "predict", "-i", str(input_path), "-o", str(output_path)]
         print(f"Executando: {' '.join(cmd)}")
         
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        result = subprocess.run(cmd, capture_output=True, text=True)
         
         if result.returncode != 0:
             print(f"Erro: {result.stderr}")
@@ -100,8 +100,6 @@ def generate_gaussian():
             "message": "Gaussian Splat gerado com sucesso!"
         })
         
-    except subprocess.TimeoutExpired:
-        return jsonify({"error": "Timeout: processamento demorou mais de 5 minutos"}), 500
     except Exception as e:
         return jsonify({"error": f"Erro: {str(e)}"}), 500
 
